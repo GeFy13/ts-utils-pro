@@ -1,5 +1,5 @@
 /**
- * Groups array items by object key or by selector callback.
+ * Группирует элементы массива по ключу объекта или по функции-селектору.
  */
 export function groupBy<T extends Record<PropertyKey, unknown>, K extends keyof T>(
   array: readonly T[],

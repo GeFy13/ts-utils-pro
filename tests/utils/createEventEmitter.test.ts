@@ -6,7 +6,7 @@ type TestEvents = {
 };
 
 describe('createEventEmitter', () => {
-  it('subscribes and emits typed payloads', () => {
+  it('подписывается и эмитит типизированные payload', () => {
     const emitter = createEventEmitter<TestEvents>();
     const readyHandler = jest.fn((payload: TestEvents['ready']) => payload.at);
 
@@ -17,13 +17,13 @@ describe('createEventEmitter', () => {
     expect(readyHandler).toHaveBeenCalledWith({ at: 123 });
   });
 
-  it('removes handler via off', () => {
+  it('удаляет обработчик через off', () => {
     const emitter = createEventEmitter<TestEvents>();
     const handler = jest.fn();
 
     emitter.on('message', handler);
     emitter.off('message', handler);
-    emitter.emit('message', { text: 'hello' });
+    emitter.emit('message', { text: 'привет' });
 
     expect(handler).not.toHaveBeenCalled();
   });

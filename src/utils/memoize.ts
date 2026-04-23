@@ -5,7 +5,7 @@ const RESULT = Symbol('memoized-result');
 type CacheNode = Map<unknown, CacheNode | unknown>;
 
 /**
- * Memoizes a function by caching results for each unique tuple of arguments.
+ * Меморизирует функцию, кешируя результат для каждого уникального набора аргументов.
  */
 export function memoize<F extends UnknownFunction>(fn: F): F {
   const root: CacheNode = new Map();

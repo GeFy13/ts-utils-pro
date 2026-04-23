@@ -1,7 +1,7 @@
 import { mergeDeep } from '../../src/utils/mergeDeep';
 
 describe('mergeDeep', () => {
-  it('deep merges nested objects', () => {
+  it('глубоко объединяет вложенные объекты', () => {
     const a = {
       user: {
         profile: {
@@ -33,7 +33,7 @@ describe('mergeDeep', () => {
     });
   });
 
-  it('replaces arrays from second object', () => {
+  it('заменяет массивы значениями из второго объекта', () => {
     const merged = mergeDeep({ list: [1, 2] }, { list: [3] });
 
     expect(merged.list).toEqual([3]);

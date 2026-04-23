@@ -1,5 +1,5 @@
 /**
- * Creates a deep clone of arrays, plain objects, Map, Set, Date and RegExp values.
+ * Создает глубокую копию массивов, обычных объектов, Map, Set, Date и RegExp.
  */
 export function deepClone<T>(obj: T): T {
   const seen = new WeakMap<object, unknown>();

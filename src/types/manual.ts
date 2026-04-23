@@ -1,5 +1,5 @@
 /**
- * Manual utility type implementations.
+ * Ручные реализации utility-типов.
  */
 export type MyPartial<T> = {
   [K in keyof T]?: T[K];

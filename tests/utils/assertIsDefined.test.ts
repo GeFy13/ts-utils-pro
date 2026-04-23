@@ -1,15 +1,15 @@
 import { assertIsDefined } from '../../src/utils/assertIsDefined';
 
 describe('assertIsDefined', () => {
-  it('does not throw for defined values', () => {
-    const value: string | undefined = 'ok';
+  it('не выбрасывает ошибку для определенных значений', () => {
+    const value: string | undefined = 'ок';
 
     expect(() => assertIsDefined(value)).not.toThrow();
   });
 
-  it('throws for undefined', () => {
+  it('выбрасывает ошибку для undefined', () => {
     const value: string | undefined = undefined;
 
-    expect(() => assertIsDefined(value, 'missing')).toThrow('missing');
+    expect(() => assertIsDefined(value, 'значение отсутствует')).toThrow('значение отсутствует');
   });
 });

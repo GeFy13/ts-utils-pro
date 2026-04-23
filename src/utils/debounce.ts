@@ -1,7 +1,7 @@
 type UnknownFunction = (...args: never[]) => unknown;
 
 /**
- * Creates a debounced function that delays execution until after the delay window.
+ * Создает debounce-обертку, откладывающую вызов функции до завершения тайм-окна.
  */
 export function debounce<F extends UnknownFunction>(fn: F, delay: number): F {
   let timeoutId: ReturnType<typeof setTimeout> | undefined;

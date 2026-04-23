@@ -9,7 +9,7 @@ type Builtin =
 type IsPlainObject<T> = T extends object ? (T extends Builtin ? false : true) : false;
 
 /**
- * Recursively merges plain-object fields from B into A and returns merged type.
+ * Рекурсивно объединяет поля обычных объектов из B в A и возвращает объединенный тип.
  */
 export type DeepMerge<A, B> = IsPlainObject<A> extends true
   ? IsPlainObject<B> extends true

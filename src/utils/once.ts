@@ -1,7 +1,7 @@
 type UnknownFunction = (...args: never[]) => unknown;
 
 /**
- * Wraps a function so it can execute only once.
+ * Оборачивает функцию так, чтобы она выполнилась только один раз.
  */
 export function once<F extends UnknownFunction>(fn: F): F {
   let called = false;

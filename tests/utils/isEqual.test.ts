@@ -1,7 +1,7 @@
 import { isEqual } from '../../src/utils/isEqual';
 
 describe('isEqual', () => {
-  it('compares nested objects and arrays', () => {
+  it('сравнивает вложенные объекты и массивы', () => {
     expect(
       isEqual(
         { user: { id: 1, tags: ['a', 'b'] } },
@@ -10,11 +10,11 @@ describe('isEqual', () => {
     ).toBe(true);
   });
 
-  it('returns false for different values', () => {
+  it('возвращает false для разных значений', () => {
     expect(isEqual({ a: 1 }, { a: 2 })).toBe(false);
   });
 
-  it('supports circular references', () => {
+  it('поддерживает циклические ссылки', () => {
     const a: { self?: unknown } = {};
     const b: { self?: unknown } = {};
     a.self = a;

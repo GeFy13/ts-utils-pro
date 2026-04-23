@@ -1,7 +1,7 @@
 type Unary<I, O> = (input: I) => O;
 
 /**
- * Composes unary functions left-to-right.
+ * Последовательно композирует унарные функции слева направо.
  */
 export function pipe<A, B>(ab: Unary<A, B>): Unary<A, B>;
 export function pipe<A, B, C>(ab: Unary<A, B>, bc: Unary<B, C>): Unary<A, C>;

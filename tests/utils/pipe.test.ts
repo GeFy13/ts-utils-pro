@@ -1,7 +1,7 @@
 import { pipe } from '../../src/utils/pipe';
 
 describe('pipe', () => {
-  it('applies functions left-to-right', () => {
+  it('применяет функции слева направо', () => {
     const transform = pipe(
       (value: number) => value + 2,
       (value: number) => value * 3,

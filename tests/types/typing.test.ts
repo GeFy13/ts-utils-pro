@@ -52,9 +52,9 @@ void pipedResult;
 const emitter = createEventEmitter<{ message: { text: string } }>();
 emitter.emit('message', { text: 'hello' });
 
-// @ts-expect-error number payload is incompatible with expected object payload
+// @ts-expect-error payload типа number несовместим с ожидаемым объектом
 emitter.emit('message', 123);
 
-// @ts-expect-error active property was omitted in MyOmit result
+// @ts-expect-error свойство active исключено из результата MyOmit
 const invalidOmitted: MyOmit<User, 'active'> = { id: 1, name: 'Bob', active: true };
 void invalidOmitted;

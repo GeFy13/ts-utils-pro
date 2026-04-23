@@ -1,5 +1,5 @@
 /**
- * Extracts domain and action from event names like "user:created".
+ * Извлекает домен и действие из имени события вида "user:created".
  */
 export type ParseEventName<T extends string> =
   T extends `${infer Domain}:${infer Action}`
@@ -7,6 +7,6 @@ export type ParseEventName<T extends string> =
     : never;
 
 /**
- * Converts a readonly tuple to a union of parsed event descriptors.
+ * Преобразует readonly-кортеж в объединение разобранных дескрипторов событий.
  */
 export type EventTupleToDescriptors<T extends readonly string[]> = ParseEventName<T[number]>;

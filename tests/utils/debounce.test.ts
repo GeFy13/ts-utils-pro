@@ -1,7 +1,7 @@
 import { debounce } from '../../src/utils/debounce';
 
 describe('debounce', () => {
-  it('runs only last call after delay', () => {
+  it('выполняет только последний вызов после задержки', () => {
     jest.useFakeTimers();
     const fn = jest.fn((value: number) => value * 2);
     const debounced = debounce(fn, 200);

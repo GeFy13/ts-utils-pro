@@ -1,7 +1,7 @@
 import { groupBy } from '../../src/utils/groupBy';
 
 describe('groupBy', () => {
-  it('groups by object key', () => {
+  it('группирует по ключу объекта', () => {
     const users = [
       { id: 1, role: 'admin' },
       { id: 2, role: 'user' },
@@ -14,7 +14,7 @@ describe('groupBy', () => {
     expect(grouped.user).toHaveLength(1);
   });
 
-  it('groups by selector callback', () => {
+  it('группирует по функции-селектору', () => {
     const numbers = [1, 2, 3, 4, 5];
 
     const grouped = groupBy(numbers, (value) => (value % 2 === 0 ? 'even' : 'odd'));

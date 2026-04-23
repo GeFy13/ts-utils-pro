@@ -8,7 +8,7 @@ export interface EventEmitter<Events extends EventMapBase> {
 }
 
 /**
- * Creates a typed event emitter.
+ * Создает типизированный эмиттер событий.
  */
 export function createEventEmitter<EventNames extends string>(): EventEmitter<Record<EventNames, unknown>>;
 export function createEventEmitter<Events extends EventMapBase>(): EventEmitter<Events>;

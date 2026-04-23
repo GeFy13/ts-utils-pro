@@ -1,7 +1,7 @@
 import { deepClone } from '../../src/utils/deepClone';
 
 describe('deepClone', () => {
-  it('clones nested object without shared refs', () => {
+  it('клонирует вложенный объект без общих ссылок', () => {
     const source = {
       user: { id: 1, tags: ['a', 'b'] },
       createdAt: new Date('2020-01-01')
@@ -16,7 +16,7 @@ describe('deepClone', () => {
     expect(cloned.createdAt).not.toBe(source.createdAt);
   });
 
-  it('keeps circular links', () => {
+  it('сохраняет циклические ссылки', () => {
     const source: { self?: unknown } = {};
     source.self = source;
 

@@ -1,7 +1,7 @@
 import { once } from '../../src/utils/once';
 
 describe('once', () => {
-  it('executes only first time and returns cached result', () => {
+  it('выполняется только при первом вызове и возвращает кешированный результат', () => {
     const fn = jest.fn((a: number, b: number) => a + b);
     const wrapped = once(fn);
 

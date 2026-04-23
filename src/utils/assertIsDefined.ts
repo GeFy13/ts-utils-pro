@@ -1,5 +1,5 @@
 /**
- * Assertion helper that narrows nullable values to non-nullable.
+ * Assertion-хелпер, который сужает nullable-значение до NonNullable.
  */
 export function assertIsDefined<T>(value: T, message = 'Expected value to be defined'): asserts value is NonNullable<T> {
   if (value === undefined || value === null) {

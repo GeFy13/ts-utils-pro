@@ -2,7 +2,7 @@ const hasOwn = (obj: object, key: PropertyKey): boolean =>
   Object.prototype.hasOwnProperty.call(obj, key);
 
 /**
- * Performs deep equality check with support for circular references.
+ * Выполняет глубокое сравнение с поддержкой циклических ссылок.
  */
 export function isEqual(a: unknown, b: unknown): boolean {
   const visited = new WeakMap<object, object>();

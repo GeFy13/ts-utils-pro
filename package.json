@@ -1,0 +1,30 @@
+{
+  "name": "ts-utils-pro",
+  "version": "1.0.0",
+  "description": "TypeScript utility library with strict typing and Jest tests",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck:tests": "tsc --noEmit -p tsconfig.types.json",
+    "prepublishOnly": "npm run build && npm run test && npm run typecheck && npm run typecheck:tests"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
